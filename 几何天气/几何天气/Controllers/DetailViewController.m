@@ -44,6 +44,7 @@ UIViewControllerTransitioningDelegate
 @property (nonatomic, strong) SuggestViewController *suggestVC;
 @property (nonatomic, strong) UIVisualEffectView *visualEffectView;
 @property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIPageControl *pageControl;
 
 @end
 
@@ -57,6 +58,7 @@ UIViewControllerTransitioningDelegate
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
         _scrollView.backgroundColor = [UIColor clearColor];
         [self.view addSubview:_scrollView];
     }
@@ -98,17 +100,26 @@ UIViewControllerTransitioningDelegate
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     [self.visualEffectView.contentView addSubview:self.weatherbgView];
-    
+    self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, Height*8/9, Width, 1)];
+    [self.view addSubview:self.pageControl];
+    self.pageControl.numberOfPages = 2;
+    self.pageControl.currentPage = 0;
+    self.pageControl.selected = NO;
+    self.pageControl.pageIndicatorTintColor = [UIColor grayColor   ];
+    self.pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [closeButton setImage:[UIImage imageNamed:@"icon_close_nor"] forState:UIControlStateNormal];
     closeButton.frame = CGRectMake(20, 20, 24, 24);
     [closeButton addTarget:self action:@selector(closeButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.visualEffectView.contentView addSubview:closeButton];
     
+ 
     
+}
 
-    
-    
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.pageControl setCurrentPage:roundf(scrollView.contentOffset.x/self.view.bounds.size.width)];
 }
 
 - (void)closeButtonClicked:(UIButton *)sender {
