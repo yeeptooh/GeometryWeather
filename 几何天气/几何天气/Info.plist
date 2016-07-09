@@ -75,7 +75,8 @@
 		<string>FilmotypeGiant.otf</string>
 		<string>TrumpGothicEast-Bold.ttf</string>
 		<string>TrumpGothicEast.ttf</string>
-		<string>chinese.ttf</string>
+		<string>FZSongKeBenXiuKaiS-R-GB.TTF</string>
+		<string>ITCAvantGardeStd-XLtObl.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

@@ -58,8 +58,8 @@
         }
         
         
-        self.temperatureLabel.font = font(fontHeight);
-        self.temperatureLabel.text = @"";
+        self.temperatureLabel.font = [UIFont fontWithName:TempFontName size:fontHeight];
+        self.temperatureLabel.text = @"28";
         self.temperatureLabel.textAlignment = NSTextAlignmentCenter;
         self.temperatureLabel.layer.shadowRadius = 2.5;
         self.temperatureLabel.textColor = [UIColor whiteColor];

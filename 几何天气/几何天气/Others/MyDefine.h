@@ -95,12 +95,13 @@
 #define kCustomDeepGreenColor kUIColorFromRGB(0x254D4E)
 
 #define TitleBoldFontName @"TrumpGothicEast-Bold"
-
+#define TempFontName @"ITCAvantGardeStd-XLtObl"
 #define TitleFontName @"FilmotypeGiant"
 
 #define BodyFontName @"HelveticaNeue-Bold"
 
-#define chineseName @"chinese"
+#define chineseName @"FZSongKeBenXiuKaiS-R-GB"
+
 
 #define kTapNotification @"tapNotification"
 #define kRemoveTapNotification @"removeTapNotification"

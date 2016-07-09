@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A495A071CF6D28E005F81B8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A061CF6D28E005F81B8 /* DetailViewController.m */; };
-		4A495A0C1CF6D3F8005F81B8 /* DismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A091CF6D3F8005F81B8 /* DismissAnimation.m */; };
-		4A495A0D1CF6D3F8005F81B8 /* PresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A0B1CF6D3F8005F81B8 /* PresentAnimation.m */; };
 		4A495A101CF6D427005F81B8 /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A0F1CF6D427005F81B8 /* SuggestViewController.m */; };
 		4A495A421CF6D481005F81B8 /* ClearAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A251CF6D481005F81B8 /* ClearAnimatorView.m */; };
 		4A495A431CF6D481005F81B8 /* CloudAnimatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A495A271CF6D481005F81B8 /* CloudAnimatorView.m */; };
@@ -51,6 +49,8 @@
 		4A6054C91CF599F50004334E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6054C71CF599F50004334E /* TencentOpenAPI.framework */; };
 		4A6054CC1CF5A12D0004334E /* AreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6054CB1CF5A12D0004334E /* AreaViewController.m */; };
 		4A65B7C81CF7D76A00331CD2 /* ZDDTapTransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A65B7C71CF7D76A00331CD2 /* ZDDTapTransitionAnimation.m */; };
+		4A6F44101D30EBCD00129CF1 /* FZSongKeBenXiuKaiS-R-GB.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4A6F440F1D30EBCD00129CF1 /* FZSongKeBenXiuKaiS-R-GB.TTF */; };
+		4A6F44121D30F31400129CF1 /* ITCAvantGardeStd-XLtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4A6F44111D30F31400129CF1 /* ITCAvantGardeStd-XLtObl.otf */; };
 		4AC5006D1CF3FC0A00C4582A /* cityData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC5006C1CF3FC0A00C4582A /* cityData.plist */; };
 		4AC570361CF445FF000B4380 /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC570351CF445FF000B4380 /* CityViewController.m */; };
 		4AEE59E81CF038A800C3BB4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE59E71CF038A800C3BB4E /* main.m */; };
@@ -60,7 +60,6 @@
 		4AEE5A0C1CF038A800C3BB4E /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE5A0B1CF038A800C3BB4E /* ____UITests.m */; };
 		4AEE5A231CF03A1F00C3BB4E /* Easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE5A1F1CF03A1F00C3BB4E /* Easing.c */; };
 		4AEE5A241CF03A1F00C3BB4E /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE5A221CF03A1F00C3BB4E /* YXEasing.m */; };
-		4AEE5A281CF03A3200C3BB4E /* chinese.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4AEE5A261CF03A3200C3BB4E /* chinese.ttf */; };
 		4AEE5A2C1CF03E2100C3BB4E /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE5A2B1CF03E2100C3BB4E /* Foundation+Log.m */; };
 		4AEE5A2F1CF03E4900C3BB4E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE5A2E1CF03E4900C3BB4E /* MainViewController.m */; };
 		4AEE5A341CF0463C00C3BB4E /* FilmotypeGiant.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4AEE5A311CF0463C00C3BB4E /* FilmotypeGiant.otf */; };
@@ -96,10 +95,6 @@
 		2583F82CA7FA4C4A032319ED /* Pods-几何天气.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-几何天气.debug.xcconfig"; path = "Pods/Target Support Files/Pods-几何天气/Pods-几何天气.debug.xcconfig"; sourceTree = "<group>"; };
 		4A495A051CF6D28E005F81B8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		4A495A061CF6D28E005F81B8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		4A495A081CF6D3F8005F81B8 /* DismissAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissAnimation.h; sourceTree = "<group>"; };
-		4A495A091CF6D3F8005F81B8 /* DismissAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissAnimation.m; sourceTree = "<group>"; };
-		4A495A0A1CF6D3F8005F81B8 /* PresentAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentAnimation.h; sourceTree = "<group>"; };
-		4A495A0B1CF6D3F8005F81B8 /* PresentAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentAnimation.m; sourceTree = "<group>"; };
 		4A495A0E1CF6D427005F81B8 /* SuggestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestViewController.h; sourceTree = "<group>"; };
 		4A495A0F1CF6D427005F81B8 /* SuggestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestViewController.m; sourceTree = "<group>"; };
 		4A495A241CF6D481005F81B8 /* ClearAnimatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearAnimatorView.h; sourceTree = "<group>"; };
@@ -176,6 +171,8 @@
 		4A6054CB1CF5A12D0004334E /* AreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaViewController.m; sourceTree = "<group>"; };
 		4A65B7C61CF7D76A00331CD2 /* ZDDTapTransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDDTapTransitionAnimation.h; sourceTree = "<group>"; };
 		4A65B7C71CF7D76A00331CD2 /* ZDDTapTransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDDTapTransitionAnimation.m; sourceTree = "<group>"; };
+		4A6F440F1D30EBCD00129CF1 /* FZSongKeBenXiuKaiS-R-GB.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZSongKeBenXiuKaiS-R-GB.TTF"; sourceTree = "<group>"; };
+		4A6F44111D30F31400129CF1 /* ITCAvantGardeStd-XLtObl.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ITCAvantGardeStd-XLtObl.otf"; sourceTree = "<group>"; };
 		4AC5006C1CF3FC0A00C4582A /* cityData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityData.plist; sourceTree = "<group>"; };
 		4AC570341CF445FF000B4380 /* CityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
 		4AC570351CF445FF000B4380 /* CityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
@@ -195,7 +192,6 @@
 		4AEE5A201CF03A1F00C3BB4E /* Easing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Easing.h; sourceTree = "<group>"; };
 		4AEE5A211CF03A1F00C3BB4E /* YXEasing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXEasing.h; sourceTree = "<group>"; };
 		4AEE5A221CF03A1F00C3BB4E /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
-		4AEE5A261CF03A3200C3BB4E /* chinese.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese.ttf; sourceTree = "<group>"; };
 		4AEE5A2A1CF03E1B00C3BB4E /* MyDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDefine.h; sourceTree = "<group>"; };
 		4AEE5A2B1CF03E2100C3BB4E /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		4AEE5A2D1CF03E4900C3BB4E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -329,10 +325,6 @@
 		4A5B9D241CF2B30100E35887 /* TransitionAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				4A495A0A1CF6D3F8005F81B8 /* PresentAnimation.h */,
-				4A495A0B1CF6D3F8005F81B8 /* PresentAnimation.m */,
-				4A495A081CF6D3F8005F81B8 /* DismissAnimation.h */,
-				4A495A091CF6D3F8005F81B8 /* DismissAnimation.m */,
 				4A5B9D251CF2B32C00E35887 /* ZDDTransitionAnimation.h */,
 				4A5B9D261CF2B32C00E35887 /* ZDDTransitionAnimation.m */,
 				4A60548D1CF537D50004334E /* ZDDShareTransitionAnimation.h */,
@@ -506,7 +498,8 @@
 				4AEE5A311CF0463C00C3BB4E /* FilmotypeGiant.otf */,
 				4AEE5A321CF0463C00C3BB4E /* TrumpGothicEast-Bold.ttf */,
 				4AEE5A331CF0463C00C3BB4E /* TrumpGothicEast.ttf */,
-				4AEE5A261CF03A3200C3BB4E /* chinese.ttf */,
+				4A6F440F1D30EBCD00129CF1 /* FZSongKeBenXiuKaiS-R-GB.TTF */,
+				4A6F44111D30F31400129CF1 /* ITCAvantGardeStd-XLtObl.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -669,10 +662,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6F44121D30F31400129CF1 /* ITCAvantGardeStd-XLtObl.otf in Resources */,
 				4A6054C81CF599F50004334E /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				4A5B9D2E1CF2D51F00E35887 /* 广州.jpg in Resources */,
 				4A5B9D2C1CF2D46600E35887 /* 上海.jpg in Resources */,
-				4AEE5A281CF03A3200C3BB4E /* chinese.ttf in Resources */,
+				4A6F44101D30EBCD00129CF1 /* FZSongKeBenXiuKaiS-R-GB.TTF in Resources */,
 				4AEE5A341CF0463C00C3BB4E /* FilmotypeGiant.otf in Resources */,
 				4AEE5A361CF0463C00C3BB4E /* TrumpGothicEast.ttf in Resources */,
 				4A5B9D301CF2D5F100E35887 /* 香港.jpg in Resources */,
@@ -765,7 +759,6 @@
 				4A495A5F1CF6FF0D005F81B8 /* UIColor+CustomColors.m in Sources */,
 				4A60548C1CF536580004334E /* ShareViewController.m in Sources */,
 				4A495A4C1CF6D481005F81B8 /* ZDDDetailView.m in Sources */,
-				4A495A0D1CF6D3F8005F81B8 /* PresentAnimation.m in Sources */,
 				4AEE5A2C1CF03E2100C3BB4E /* Foundation+Log.m in Sources */,
 				4A495A481CF6D481005F81B8 /* ThunderAnimatorView.m in Sources */,
 				4A495A441CF6D481005F81B8 /* HazeAnimatorView.m in Sources */,
@@ -775,7 +768,6 @@
 				4A54284C1CF297FE006BAD00 /* Weather.m in Sources */,
 				4A65B7C81CF7D76A00331CD2 /* ZDDTapTransitionAnimation.m in Sources */,
 				4A495A561CF6E907005F81B8 /* AbstractView.m in Sources */,
-				4A495A0C1CF6D3F8005F81B8 /* DismissAnimation.m in Sources */,
 				4A495A101CF6D427005F81B8 /* SuggestViewController.m in Sources */,
 				4A495A431CF6D481005F81B8 /* CloudAnimatorView.m in Sources */,
 				4A495A591CF6E9AE005F81B8 /* WeatherBackgroundView.m in Sources */,

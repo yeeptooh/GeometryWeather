@@ -10,7 +10,7 @@
 #import "MyDefine.h"
 #import "AFNetworking.h"
 #import "CityListScrollView.h"
-
+#import "GlobalFunction.h"
 #import "Weather.h"
 #pragma mark - Navi上的按钮推出视图及转场动画
 #import "CityViewController.h"
@@ -29,6 +29,8 @@ CityScrollViewCellDelegate,
 UIViewControllerTransitioningDelegate,
 UIScrollViewDelegate
 >
+@property (nonatomic, assign) NSInteger location;
+
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UIActivityIndicatorView *activityView;
 @property (nonatomic, strong) UILabel *LoadingLabel;
@@ -131,7 +133,7 @@ UIScrollViewDelegate
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addTapGesture:) name:kTapNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeTapGesture:) name:kRemoveTapNotification object:nil];
-    
+    self.location = 0;
     [self setCustomNavigationView];
     [self networkingForWeather];
     
@@ -270,6 +272,7 @@ UIScrollViewDelegate
         
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
         [self setScrollView];
+        
     });
 
 }
@@ -334,6 +337,8 @@ UIScrollViewDelegate
 
     if (((NSInteger)scrollView.contentOffset.x)%320 == 0) {
         
+        self.location = ((NSInteger)scrollView.contentOffset.x)/320;
+        
         CityScrollViewCell *cell = (CityScrollViewCell *)self.cellList[((NSInteger)scrollView.contentOffset.x)/320];
         
         self.bundleLabel.text = cell.contentNameLabel.text;
@@ -351,6 +356,75 @@ UIScrollViewDelegate
 
 - (void)locationButtonClicked:(UIButton *)sender {
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:[NSString stringWithFormat:@"https://api.heweather.com/x3/weather?city=%@&key=%@",@"haerbin",apiIDKey] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        Weather *weather = [Weather weatherFromDailyDic:responseObject];
+        [self.List insertObject:weather atIndex:self.location];
+        
+        
+        CityScrollViewCell *contentCell = [[CityScrollViewCell alloc] initWithFrame:CGRectMake(self.view.bounds.size.width*self.location, 0, self.view.bounds.size.width, self.scrollView.frame.size.height - 30) AndWeather:weather];
+        contentCell.transform = CGAffineTransformScale(contentCell.transform, 0.1, 0.1);
+        contentCell.alpha = 0;
+        contentCell.imageView.image = [UIImage imageWithContentsOfFile:weather.image];
+        contentCell.index = self.location;
+        contentCell.delegate = self;
+        
+        
+        
+        CityScrollViewCell *subView = self.scrollView.subviews[self.location];
+        
+        UIView *snapView = [subView snapshotViewAfterScreenUpdates:YES];
+        [self.scrollView insertSubview:contentCell belowSubview:subView];
+        [self.scrollView insertSubview:snapView aboveSubview:contentCell];
+        snapView.alpha = 0;
+        subView.alpha = 0;
+        
+        
+        [self.cellList insertObject:contentCell atIndex:self.location];
+        
+        [UIView animateWithDuration:0.5 delay:0.25 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            
+            contentCell.alpha = 1;
+            contentCell.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            subView.alpha = 1;
+        }];
+        
+        
+        [UIView animateWithDuration:0.75 animations:^{
+
+            
+                
+     
+                
+            } completion:^(BOOL finished) {
+                self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * self.List.count, self.scrollView.frame.size.height);
+                for (NSInteger i = 0; i< self.List.count; i++) {
+                    
+                    CityScrollViewCell *contentCell = self.cellList[i];
+                    contentCell.frame = CGRectMake(self.view.bounds.size.width*i , 0, self.view.bounds.size.width, _scrollView.frame.size.height - 30);
+                    
+                    [self.scrollView addSubview:contentCell];
+                    
+                    
+                }
+            }];
+        
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"请求失败");
+    }];
+    
+    
+    
+    
+    
+    return ;
+    
     CityViewController *cityVC = [[CityViewController alloc] init];
     cityVC.transitioningDelegate = self;
     cityVC.modalPresentationStyle = UIModalPresentationCustom;
@@ -359,7 +433,7 @@ UIScrollViewDelegate
 
 - (void)didClickScrollViewCellWithIndex:(NSInteger)index {
     DetailViewController *detailVC = [[DetailViewController alloc] init];
-    
+    detailVC.weather = self.List[index];
     detailVC.transitioningDelegate = self;
     detailVC.modalPresentationStyle = UIModalPresentationCustom;
     

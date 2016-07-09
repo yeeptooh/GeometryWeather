@@ -25,6 +25,7 @@
         CGFloat distanceFromCenterX = view.frame.origin.x - contentOffsetX;
         
         CGFloat offsetRatio = distanceFromCenterX / CGRectGetWidth(self.frame);
+        
         CGFloat angle = offsetRatio * 30;
         //前半部分
         if (offsetRatio < 0) {

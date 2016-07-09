@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Weather.h"
 #import "WeatherBackgroundView.h"
 #import "ZDDDetailView.h"
 #import "ZDDChartView.h"
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, strong) Weather *weather;
+
 @property (nonatomic, strong) WeatherBackgroundView *weatherbgView;
 @property (nonatomic, strong) ZDDDetailView         *detailView;
 @property (nonatomic, strong) ZDDChartView          *chartView;
