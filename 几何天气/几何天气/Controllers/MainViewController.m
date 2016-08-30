@@ -335,11 +335,11 @@ UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-    if (((NSInteger)scrollView.contentOffset.x)%320 == 0) {
+    if (((NSInteger)scrollView.contentOffset.x)%(NSInteger)Width == 0) {
         
         self.location = ((NSInteger)scrollView.contentOffset.x)/320;
         
-        CityScrollViewCell *cell = (CityScrollViewCell *)self.cellList[((NSInteger)scrollView.contentOffset.x)/320];
+        CityScrollViewCell *cell = (CityScrollViewCell *)self.cellList[((NSInteger)scrollView.contentOffset.x)/(NSInteger)Width];
         
         self.bundleLabel.text = cell.contentNameLabel.text;
     }
@@ -392,13 +392,8 @@ UIScrollViewDelegate
             subView.alpha = 1;
         }];
         
-        
         [UIView animateWithDuration:0.75 animations:^{
 
-            
-                
-     
-                
             } completion:^(BOOL finished) {
                 self.scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * self.List.count, self.scrollView.frame.size.height);
                 for (NSInteger i = 0; i< self.List.count; i++) {
@@ -407,8 +402,7 @@ UIScrollViewDelegate
                     contentCell.frame = CGRectMake(self.view.bounds.size.width*i , 0, self.view.bounds.size.width, _scrollView.frame.size.height - 30);
                     
                     [self.scrollView addSubview:contentCell];
-                    
-                    
+                   
                 }
             }];
         

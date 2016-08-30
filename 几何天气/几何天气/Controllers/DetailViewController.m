@@ -58,8 +58,6 @@ UIViewControllerTransitioningDelegate
 @property (nonatomic, strong) ThunderAnimatorView *thunderView;
 @property (nonatomic, strong) WindAnimatorView *windView;
 
-
-
 @end
 
 @implementation DetailViewController
@@ -185,6 +183,7 @@ UIViewControllerTransitioningDelegate
     }
     return _weatherbgView;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
@@ -208,7 +207,6 @@ UIViewControllerTransitioningDelegate
 - (void)closeButtonClicked:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 
 
